@@ -1,4 +1,7 @@
-<template>Input: {{ number }}</template>
+<template>
+  <div>Input: {{ number }}</div>
+  <div>Result: {{ print(number) }}</div>
+</template>
 
 <script setup>
 const FIZZ = {
@@ -19,7 +22,9 @@ defineProps({
 })
 
 function print(number) {
-  let printReturn = ''
+  let printReturn = ""
+
+  if (!number) return ""
 
   if (isMultiply(number, FIZZ.multiplier)) printReturn += FIZZ.label
 

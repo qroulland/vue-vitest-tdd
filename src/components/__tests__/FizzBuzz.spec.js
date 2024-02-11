@@ -5,10 +5,10 @@ import { mount } from '@vue/test-utils'
 import FizzBuzz from '@/components/FizzBuzz.vue'
 
 describe('FizzBuzz', () => {
-  it('Should render properly', () => {
-    const component = mount(FizzBuzz, { props: { number: 1 } })
+  it('Should return empty when number is null', () => {
+    const component = mount(FizzBuzz, { props: { number: null } })
 
-    expect(component.text()).toContain(1)
+    expect(component.vm.print(component.props().number)).toBe("")
   })
 
   it('Should return same number', () => {
@@ -33,5 +33,11 @@ describe('FizzBuzz', () => {
     const component = mount(FizzBuzz, { props: { number: 15 } })
 
     expect(component.vm.print(component.props().number)).toBe('FIZZBUZZ')
+  })
+
+  it('Should render properly', () => {
+    const component = mount(FizzBuzz, { props: { number: 30 } })
+
+    expect(component.text()).toContain('Result: FIZZBUZZ')
   })
 })
