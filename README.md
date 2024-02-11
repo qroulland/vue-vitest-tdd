@@ -1,14 +1,18 @@
-# vue-vitest-tdd
+# Vue-vitest-tdd
 
-This template should help get you started developing with Vue 3 in Vite.
+Short project to practice the TDD method with the FizzBuzz kata.
 
-## Recommended IDE Setup
+## Project objectives
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+To fully understand the TDD steps, let's take a concrete example with the simple FizzBuzz kata (famous for its frequent use in recruitment tests).
 
-## Customize configuration
+### Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The FizzBuzz kata asks us to write a program that displays:
+- Fizz if the number is a multiple of 3
+- Buzz if the number is a multiple of 5
+- FizzBuzz if the number is a multiple of 3 and 5
+- The number itself in all other cases
 
 ## Project Setup
 
